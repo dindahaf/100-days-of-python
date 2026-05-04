@@ -76,4 +76,3 @@ def play_game():
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == "y":
     print("\n" * 20)
     play_game()
-

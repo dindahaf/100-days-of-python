@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="16d90d27-6968-404c-bb28-79d8ce40b425" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../NATO-alphabet-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../NATO-alphabet-start/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-16-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-16-start/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-17-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-17-start/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-18-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-18-start/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-19/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-19/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-24/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-24/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-24/my_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../day-24/my_text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-25/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-25/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-26/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-26/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-27/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-27/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-27/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-27/playground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-30/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-30/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-33/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../day-33/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../issoverhead-start/.idea/issoverhead-start.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../issoverhead-start/.idea/issoverhead-start.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pomodoro-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pomodoro-start/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snake_game/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_game/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snake_game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_game/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snake_game/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_game/scoreboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../snake_game/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/../snake_game/snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../turtle-crossing-start/car_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/../turtle-crossing-start/car_manager.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.5051591573510699" />
+      <entry key="MS500" value="3.281059794259909" />
+      <entry key="S2" value="7.487262920739307" />
+      <entry key="S5" value="16.855608046236227" />
+      <entry key="S10" value="30.613801745900325" />
+      <entry key="S30" value="63.60342367932671" />
+      <entry key="S60" value="82.19615939397376" />
+      <entry key="M2" value="94.66744659151475" />
+      <entry key="M5" value="103.52763371078056" />
+      <entry key="M10" value="108.52589545137086" />
+      <entry key="M15" value="114.47290706440292" />
+      <entry key="M30" value="134.34265300675673" />
+      <entry key="H1" value="163.15272245382695" />
+      <entry key="H2" value="196.73730917927062" />
+      <entry key="H4" value="231.60851196733546" />
+      <entry key="D1" value="336.01029790455095" />
+      <entry key="W1" value="387.1861849514712" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="3.1956153157221753E-173" />
+      <entry key="M5" value="1.0042036546215328E-69" />
+      <entry key="M10" value="3.168917251399182E-35" />
+      <entry key="M15" value="1.0013992593671964E-23" />
+      <entry key="M30" value="3.1644893100896874E-12" />
+      <entry key="H1" value="1.7789011524223884E-6" />
+      <entry key="H2" value="0.0013337545322968454" />
+      <entry key="H4" value="0.03652060421593327" />
+      <entry key="D1" value="0.5760006749879883" />
+      <entry key="W1" value="0.924218618511958" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.4584779485242885" />
+      <entry key="MS500" value="3.2448699532773837" />
+      <entry key="S2" value="7.465965848798765" />
+      <entry key="S5" value="16.839257555146986" />
+      <entry key="S10" value="30.600115678760957" />
+      <entry key="S30" value="63.594026252511256" />
+      <entry key="S60" value="82.18997958161505" />
+      <entry key="M2" value="94.66384271527659" />
+      <entry key="M5" value="103.52601439138336" />
+      <entry key="M10" value="108.52397524152127" />
+      <entry key="M15" value="114.46916794291005" />
+      <entry key="M30" value="134.3352632016817" />
+      <entry key="H1" value="163.14452512850136" />
+      <entry key="H2" value="196.73184769695365" />
+      <entry key="H4" value="231.6403008138535" />
+      <entry key="D1" value="336.5849934169457" />
+      <entry key="W1" value="388.1101853086234" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3GiWPWHvrZfHcjc7Qxpu4BU8Uky" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50341a9f1f9c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.26222.68" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16d90d27-6968-404c-bb28-79d8ce40b425" name="Changes" comment="" />
+      <created>1784454845586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784454845586</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

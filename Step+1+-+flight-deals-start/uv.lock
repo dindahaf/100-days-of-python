@@ -1,0 +1,32 @@
+version = 1
+revision = 3
+requires-python = ">=3.9"
+
+[[package]]
+name = "appier"
+version = "1.46.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/13/957337ad9542ebfe5554aae6b71a5285e7b1d9ecb141ba92c02df8c04c48/appier-1.46.0.tar.gz", hash = "sha256:0edc15a7e9bb96837b426a1cd986f58db025d15563bdd560a2a86b83a77b02d4", size = 252596, upload-time = "2026-05-31T21:18:29.035Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/02/6a/1257f2e5f2408dc6b715fb259694cc937a09cbfb363237e730b53437f384/appier-1.46.0-py2.py3-none-any.whl", hash = "sha256:6886efc8b45fd9d629fdd53c1a27448602bff2e2ad2c5cceab50936313319184", size = 319459, upload-time = "2026-05-31T21:18:26.795Z" },
+]
+
+[[package]]
+name = "step-1-flight-deals-start"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "twilio-api" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "twilio-api", specifier = ">=0.1.1" }]
+
+[[package]]
+name = "twilio-api"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "appier" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/ef/9d310a808476e8427013d9f3bc2a28806878ec8e20447f94091f9e2733f9/twilio_api-0.1.1.zip", hash = "sha256:3ffef47db7474d9374a000407f7f4f16a713c9d8eccf965000c8d92157e12836", size = 7242, upload-time = "2014-06-25T17:03:54.59Z" }

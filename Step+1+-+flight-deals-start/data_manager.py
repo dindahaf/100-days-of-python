@@ -6,7 +6,9 @@ class DataManager:
     #This class is responsible for talking to the Google Sheet.
     def __init__(self):
         self.sheet_endpoint = os.environ["SHEET_ENDPOINT"]
-        self.destinations = []
+        self.users_endpoint = os.environ["USERS_ENDPOINT"]
+        self.destinations = {}
+        self.customers = {}
         self.bearer_headers = {
             "Authorization": f"Bearer {os.environ["TOKEN"]}"
         }
@@ -29,6 +31,12 @@ class DataManager:
             headers=self.bearer_headers
         )
 
+    def get_customer_emails(self):
+        response = requests.get(url=self.users_endpoint, headers=self.bearer_headers)
+        data = response.json()
+
+        self.customers = data["users"]
+        return self.customers
 
 
 

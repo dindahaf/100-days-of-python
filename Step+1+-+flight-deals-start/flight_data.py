@@ -3,7 +3,8 @@ import requests
 #This class is responsible for structuring the flight data.
 class FlightData:
 
-    def __init__(self, api_price, api_origin_airport, api_destination_airport, api_out_date, api_return_date):
+    def __init__(self, api_price, api_origin_airport, api_destination_airport, api_out_date, api_return_date, api_stops):
+        self.stops = api_stops
         self.price = api_price
         self.origin_airport = api_origin_airport
         self.destination_airport = api_destination_airport
@@ -11,6 +12,7 @@ class FlightData:
         self.return_date = api_return_date
 
 def find_cheapest_flight(api_data, return_date ):
+
     # Handle empty data if no flight data is returned
     if api_data is None or (not api_data.get("best_flights") and not api_data.get("other_flights")):
         print("No flight data")
@@ -20,13 +22,17 @@ def find_cheapest_flight(api_data, return_date ):
 
     # Getting the first flight's items from all_flights as the baseline for subsequent flight comparisons.
     first_flight = all_flights[0]
+
+    # Calculate the stops from the API data flights
+    number_of_stops = len(first_flight["flights"]) - 1
+
     lowest_price = first_flight["price"]
     origin = first_flight["flights"][0]["departure_airport"]["id"]
     destination = first_flight["flights"][-1]["arrival_airport"]["id"]
     out_date = first_flight["flights"][0]["departure_airport"]["time"].split(" ")[0]
 
     # Set the items for the FlightData class
-    cheapest_flight = FlightData(lowest_price, origin, destination, out_date, return_date)
+    cheapest_flight = FlightData(lowest_price, origin, destination, out_date, return_date, number_of_stops)
 
     # Looking for the lowest price from all_flight with looping all the flight
     for flight in all_flights:
@@ -40,6 +46,7 @@ def find_cheapest_flight(api_data, return_date ):
             origin = first_flight["flights"][0]["departure_airport"]["id"]
             destination = first_flight["flights"][-1]["arrival_airport"]["id"]
             out_date = first_flight["flights"][0]["departure_airport"]["time"].split(" ")[0]
+            number_of_stops = len(first_flight["flights"]) - 1
 
             # if the price in this flight is the lowest one by the time this flight come up,
             # then assign all the necessary items to the FLightData class.

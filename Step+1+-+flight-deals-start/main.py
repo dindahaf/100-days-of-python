@@ -2,6 +2,8 @@
 
 # =========== keep the cache of the API so that we do not getting new API resource since the API is free plan and have limited requests ===========
 import requests_cache
+import smtplib
+from twilio.rest import Client
 
 requests_cache.install_cache(
     cache_name="flight_cache",
@@ -32,6 +34,9 @@ data_manager = DataManager()
 sheet_data = data_manager.get_the_data()
 pprint(sheet_data)
 
+customer_data = data_manager.get_customer_emails()
+customer_email_list = [row["whatIsYourEmail?"] for row in customer_data]
+
 flight_search = FlightSearch()
 notification_manager = NotificationManager()
 # Looping the item in the sheet since we want to check several destinations
@@ -39,6 +44,7 @@ notification_manager = NotificationManager()
 
 ORIGIN_CITY_IATA = "CGK"
 for destination in sheet_data:
+    pprint(f"Getting direct flights for {destination['city']}...")
     search_data = flight_search.check_flight(
             origin_city_code=ORIGIN_CITY_IATA,
             destination_city_code=destination["iataCode"],
@@ -47,20 +53,45 @@ for destination in sheet_data:
     pprint(search_data)
 
 
-# Finding the cheapest flight from the API response
+    # Finding the cheapest flight from the API response
+    # checking if the current price in the sheet are the lowest one, or it can find the lower price than that.
+    # if yes, then save it into the sheety sheet
 
     cheapest_flight = find_cheapest_flight(search_data, return_day.strftime("%Y-%m-%d"))
     pprint(f"{destination['city']}: IDR {cheapest_flight.price}")
 
-# checking if the current price in the sheet are the lowest one, or it can find the lower price than that.
-# if yes, then save it into the sheety sheet
-    if cheapest_flight.price != "N/A" and cheapest_flight.price < destination['lowestPrice']:
-        pprint(f"Lower price flight found to {sheet_data[2]['city']}!")
-        data_manager.update_lowest_price(destination["id"], cheapest_flight.price)
-        print("updated lowest price")
-        notification_manager.send_whatsapp_message(
-            text_message=f"Low price alert! Only IDR {cheapest_flight.price} to fly "
-                         f"from {cheapest_flight.origin_airport} to {cheapest_flight.destination_airport}, "
-                         f"on {cheapest_flight.out_date} until {cheapest_flight.return_date}."
+    if cheapest_flight.price == "N/A":
+        search_stopover_data = flight_search.check_flight(
+            origin_city_code=ORIGIN_CITY_IATA,
+            destination_city_code=destination["iataCode"],
+            from_date=tomorrow.strftime("%Y-%m-%d"),
+            to_date=return_day.strftime("%Y-%m-%d"),
+            is_direct=False
         )
+        pprint(search_data)
+
+        cheapest_flight = find_cheapest_flight(search_stopover_data, return_day.strftime("%Y-%m-%d"))
+        pprint(f"Cheapest indirect flight price to {destination['city']}: IDR {cheapest_flight.price}")
+
+
+    if cheapest_flight.price != "N/A" and cheapest_flight.price < destination['lowestPrice']:
+        data_manager.update_lowest_price(destination["id"], cheapest_flight.price)
+        if cheapest_flight.stops == 0:
+            text_message = f"Low price alert! Only IDR {cheapest_flight.price} to fly direct"\
+            f"from {cheapest_flight.origin_airport} to {cheapest_flight.destination_airport}, "\
+            f"on {cheapest_flight.out_date} until {cheapest_flight.return_date}."
+        else:
+            text_message = f"Low price alert! Only IDR {cheapest_flight.price} to fly direct" \
+                           f"from {cheapest_flight.origin_airport} to {cheapest_flight.destination_airport}, " \
+                           f"with {cheapest_flight.stops} stop(s) " \
+                           f"on {cheapest_flight.out_date} until {cheapest_flight.return_date}."
+
+
+        pprint(f"Check your email and WhatsApp! Lower price flight found to {sheet_data[2]['city']}!")
+
+        # notification_manager.send_whatsapp_message(text_message)
+        notification_manager.send_emails(email_list=customer_email_list, email_body=text_message)
+
+
+
 

@@ -10,7 +10,7 @@ class FlightSearch:
         self._api_key = os.environ["SERP_API_KEY"]
         self.api = "https://serpapi.com/search"
 
-    def check_flight(self, origin_city_code, destination_city_code, from_date, to_date):
+    def check_flight(self, origin_city_code, destination_city_code, from_date, to_date, is_direct=True):
         query = {
             "engine": "google_flights",
             "departure_id": origin_city_code,
@@ -22,6 +22,11 @@ class FlightSearch:
             "currency": "IDR",
             "api_key": self._api_key,
         }
+
+        # Only include stops parameter if is_direct is True
+        if is_direct:
+            query["stops"] = "1"
+
         flight_response = requests.get(url=self.api, params=query)
 
         if flight_response.status_code != 200:
